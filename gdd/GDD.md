@@ -6,7 +6,7 @@
 
 **HIGH CONCEPT STATEMENT**
 
-The current state of the game right now features the "run and gun" with only a few enemies for now. This gameplay is inspired by the game contra where enemies would go towards you but this level in the prototype, for now, has no hostile enemies This is the basis of what is planned. 
+The current state of the game right now features the "run and gun" with only a few enemies for now. This gameplay is inspired by the game contra where enemies would go towards you but this level in the prototype, for now, has no hostile enemies This is the basis of what is planned.
 
 
 
@@ -22,7 +22,7 @@ The current state of the game right now features the "run and gun" with only a f
 
 &#x20;         - You can avoid enemies if you choose to
 
-* Procedures - run to shoot 
+* Procedures - run to shoot
 
 &#x09;       - shoot enemies/mobs
 

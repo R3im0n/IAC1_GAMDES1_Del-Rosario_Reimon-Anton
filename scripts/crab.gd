@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var enemy_death_effect = preload("res://scenes/enemy_death_effect.tscn")
+const coin_pickup = preload("res://scenes/coin.tscn")
 
 @export var patrol_points : Node
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -20,6 +21,9 @@ var current_point_postion : int
 var can_walk : bool
 
 @export var health: int = 3
+
+@export var drop_chance: float = 1.0
+
 
 func _ready():
 	#patrolling function
@@ -98,4 +102,11 @@ func _on_hitbox_area_entered(area: Area2D):
 			var enemy_death_effect_instance = enemy_death_effect.instantiate() as Node2D
 			enemy_death_effect_instance.global_position = global_position
 			get_parent().add_child(enemy_death_effect_instance)
+			#queue_free()
+			if randf() <= drop_chance:
+				var pickup = coin_pickup.instantiate()
+
+				get_parent().add_child(pickup)
+				pickup.global_position = global_position
+
 			queue_free()
