@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://shxvlxk6272p"]
+
+[ext_resource type="Texture2D" uid="uid://7ukoy0njiuha" path="res://assets/images/fx/Free Smoke Fx  Pixel 07.png" id="1_bnl1y"]
+[ext_resource type="Script" uid="uid://vjn1wbs2awp5" path="res://scripts/crab_ground_smash.gd" id="2_smash"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf6we"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(0, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60qbr"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(68, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5q3o"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(136, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrmm8"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(204, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1ap4"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(272, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r25nv"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(340, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c6uh"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(408, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnph6"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(476, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxk6n"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(544, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt1e4"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(612, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i07c3"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(680, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6j5e"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(748, 640, 68, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kstnp"]
+atlas = ExtResource("1_bnl1y")
+region = Rect2(816, 640, 68, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hdmg1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kf6we")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60qbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5q3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrmm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1ap4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r25nv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5c6uh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnph6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxk6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt1e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i07c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6j5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kstnp")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smash"]
+size = Vector2(60, 30)
+
+[node name="CrabGroundSmash" type="AnimatedSprite2D" unique_id=1540048757]
+sprite_frames = SubResource("SpriteFrames_hdmg1")
+offset = Vector2(0, -18)
+script = ExtResource("2_smash")
+travel_speed = 200.0
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1741265553]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1902902304]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_smash")
