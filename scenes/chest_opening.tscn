@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d28ygbn848v3b"]
+
+[ext_resource type="Texture2D" uid="uid://bifeuwrv5xpms" path="res://assets/images/tileset/breakable-ttilesets-Sheet-export.png" id="1_tlynp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbw4c"]
+atlas = ExtResource("1_tlynp")
+region = Rect2(336, 93, 16, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anord"]
+atlas = ExtResource("1_tlynp")
+region = Rect2(368, 93, 16, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_02uwx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbw4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anord")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="chestOpening" type="AnimatedSprite2D" unique_id=97172769]
+sprite_frames = SubResource("SpriteFrames_02uwx")
