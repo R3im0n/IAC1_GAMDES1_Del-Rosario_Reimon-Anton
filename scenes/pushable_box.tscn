@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://fffxpt1vvnpu"]
+
+[ext_resource type="Script" uid="uid://cwfggpdskl371" path="res://scripts/pushable_box.gd" id="2_34ggu"]
+[ext_resource type="Texture2D" uid="uid://814yrg5bnxfw" path="res://assets/images/tileset/tilesets.png" id="2_u5jnu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
+size = Vector2(514, 508)
+
+[node name="PushableBox" type="CharacterBody2D" unique_id=870591453]
+texture_filter = 1
+position = Vector2(0, -11.535)
+scale = Vector2(0.045, 0.045)
+collision_layer = 14
+collision_mask = 15
+script = ExtResource("2_34ggu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1263591433]
+scale = Vector2(16.015, 16.015)
+texture = ExtResource("2_u5jnu")
+region_enabled = true
+region_rect = Rect2(336, 128, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1283860122]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_u0ya7")
